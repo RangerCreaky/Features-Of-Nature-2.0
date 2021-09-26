@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1bc36632b3.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/review.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="background">
+
+    </div>
+
+    <div class="title">
+        <div class="image">
+            <img src="../directory/<%= data.name %>-logo.jpg" alt="">
+        </div>
+        <div class="name">
+            <h1> <%= data.name %> </h1>
+            <h4> <em> <%= data.scientificName %> </em> </h4>
+        </div>
+    </div>
+    <hr class="h-rule">
+    <div class="comment">
+        <h3 class="small-heading"> Ever seen a <%= data.name %>!? Write your experience </h3>
+        <form action="/review" method="post">
+            <div class="inputs">
+                <input type="hidden" name="element" value="<%= data.name %>">
+                <div class="user-details">
+                    <img class="avatar" src="https://i.pravatar.cc/300" alt="">
+                    <input class="name-input"  name="nickname" type="text" class="form-control" id="name" value="Anonymous">
+                </div>
+                <textarea class="write-review" name="review" class="form-control" id="exampleFormControlTextarea1" rows="7" placeholder="Experience"></textarea>
+            </div>
+
+            <input type="submit" value="Submit" class="btn btn-lg btn-outline-secondary button">
+        </form>
+    </div>
+
+    <hr class="h-rule2">
+
+
+    <% data.reviews.forEach((element , index) => { %>
+        <% if (index%2 == 0) { %>
+            <div class="review-left reviews">
+                <img class="avatar" src="https://i.pravatar.cc/300" alt="">
+                <div class="single-review">
+                    <h5> <%= element.nickname %> </h5>
+                    <p> <%= element.review %>  </p>
+                </div>
+            </div>
+        <% } else if( index%2 == 1 ) {%>
+            <div class="review-right reviews">
+                <div class="single-review">
+                    <h5> <%= element.nickname %> </h5>
+                    <p> <%= element.review %>  </p>
+                </div>
+                <img class="avatar" src="https://i.pravatar.cc/300" alt="">
+            </div>
+        <% } %>
+    <% }) %>  
+</body>
+</html>

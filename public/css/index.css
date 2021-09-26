@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+@font-face {
+    font-family: 'cf_one_two_treesregular';
+    src : url("../fonts/cfonetwotrees-regular-webfont.woff")
+
+}
+.background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../images/background.jpg") no-repeat 50% 50% / cover;
+    opacity: 0.65;
+    z-index: -1;
+}
+
+.title{
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.heading{
+    text-shadow: 2px 2px 11px #3f7e44;
+    text-align: center;
+    font-family: 'cf_one_two_treesregular';
+    font-weight: 800;
+    font-size: 6rem;
+    color: rgb(49, 102, 49);
+}
+
+.tag{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.2rem; 
+    color: rgb(19, 141, 19);
+}
+.buttons{
+    text-align: center;
+    margin-top: 2rem;
+}
+.buttons a{
+    width: 15%;
+    margin: 0 1rem;
+}
+
+.btn-success{
+    background-color: rgb(54, 156, 54);
+}

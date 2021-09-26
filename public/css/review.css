@@ -1,0 +1,135 @@
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+ 
+ /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(110, 164, 226);
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    /* background: black;  */
+    background: rgb(18,  83, 168); 
+  }
+
+.background{
+    width: 100%;
+    height: 500%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../directory/review-background.jpg") no-repeat 50% 50% / cover;
+    opacity: 0.65;
+    z-index: -1;
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 2rem auto;
+}
+
+
+.image img{
+    width: 100px;
+    height: 100px;
+    border-radius: 200px;
+    border: 3px solid black;
+    margin-right: 10px;
+}
+
+.small-heading{
+    margin-top: 2.4rem;
+    text-align: center;
+}
+
+.user-details{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 65%;
+    margin: auto;
+}
+
+.avatar{
+    width: 80px;
+    height: 80px;
+    border-radius: 200px;
+}
+
+.name-input{
+    width: 100%;
+    height: 50px;
+    outline: none;
+    border: 2px solid gray !important;
+    border-radius: 0 !important;
+    color: black !important;
+    padding: 1rem;
+    font-family: 'Ubuntu Mono', monospace;
+    margin-left: 10px;
+    background-color: rgb(221, 220, 220);
+}
+
+.write-review{
+    display: block;
+    width: 65%;
+    margin: 1rem auto;
+    outline: none;
+    border: 2px solid gray !important;
+    border-radius: 0 !important;
+    color: black !important;
+    padding: 1rem;
+    font-family: 'Ubuntu Mono', monospace;
+    background-color: rgb(221, 220, 220);
+}
+
+.button{
+    width: 10rem;
+    display: block;
+    margin: auto;
+}
+
+.h-rule2{
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.reviews{
+    box-shadow: 0px 0px 11px 1px grey;
+    padding: 1.5rem;
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0 auto 2rem auto;
+    font-weight: 600;
+}
+
+.review-right .single-review h5{
+    text-align: right;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.review-right .single-review p{
+    text-align: left;
+    margin-right: 10px;
+}
+
+.single-review{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+}
+
